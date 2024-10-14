@@ -16,6 +16,11 @@ Remember, life’s too short for accidental deletions. Give `rrm` a whirl, and m
 > [!NOTE]
 > If anyone asks why you're using it, just say it's for the fun and the love of Rust. After all, who doesn't enjoy a side quest in their coding journey?
 
+One of the standout features of `rrm` is that it doesn't rely on external configuration files or additional tracking systems to manage deleted files. Instead, `rrm` harnesses the power of your filesystem's **extended attributes** to store essential metadata—like the original file path and deletion time—directly within each trashed item. This means:
+
+- **Seamless integration:** By using extended attributes, all the necessary information stays with the file itself, making restoration straightforward.
+- **Reliability:** Since the metadata is part of the file's attributes, it's less prone to issues that can arise from external tracking mechanisms.
+
 
 Features
 - Safe Deletion: Moves files and directories to a trash directory instead of deleting them immediately.
